@@ -21,20 +21,23 @@ import scripts.crafttweaker.stages.stageFive;
 static stagedMods as string[][string] = {
 // Additions by customs
 	stageOne.stage : [
-		"grimoireofgaia"
+		"grimoireofgaia",
+		"millenaire"
 	],
 
 	stageTwo.stage : [
 		"thebetweenlands",
 		"twilightforest",
-		"uppers"
+		"uppers",
+		"minecolonies"
 	],
 
 	stageThree.stage : [
 		"immersivepetroleum",
 		"immersivetech",
 		"nex",
-		"vc"
+		"vc",
+		"ancientwarfare"
 	],
 
 	stageFour.stage : [
