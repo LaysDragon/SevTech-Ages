@@ -10,12 +10,20 @@
 */
 import mods.zenstages.ZenStager;
 
+// Additions by customs
+import scripts.crafttweaker.stages.stageOne;
+
 import scripts.crafttweaker.stages.stageTwo;
 import scripts.crafttweaker.stages.stageThree;
 import scripts.crafttweaker.stages.stageFour;
 import scripts.crafttweaker.stages.stageFive;
 
 static stagedMods as string[][string] = {
+// Additions by customs
+	stageOne.stage : [
+		"grimoireofgaia"
+	],
+
 	stageTwo.stage : [
 		"thebetweenlands",
 		"twilightforest",
