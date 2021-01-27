@@ -781,27 +781,27 @@ glacierGalena.addGenerator(galena_sample)
 //Creates a new SkyIslandGeneratorV2, sets its grid region size, and adds it to the generator list for the dimension.
 ////
 skyIslands = new SkyIslandGeneratorV2()
-skyIslands.setRegionSize(50)
+skyIslands.setRegionSize(64)
 skyIslands.enableBWMVillageCompat()
 skyIslands.enableBWMMineshaftCompat()
 addGenerator(skyIslands)
 
 //Adds sky islands. Arguments are horizontal radius, top height, bottom height, number of times to attempt to generate in each region, and whether each island should choose a random type (true), or if types should be used in order (false).
 //Spawn biomes
-large = skyIslands.addSkyIslands(36, 36, 36, 1, false, 1)
+large = skyIslands.addSkyIslands(96, 96, 96, 1, false, 1)
 large.setWaterHeight(3)
-large.setHeightRange(70, 80)
+large.setHeightRange(64, 96)
 large.addType(spawn)
 
 //Ocean islands. Separate so they can be larger and have deeper water
-oceanIslands = skyIslands.addSkyIslands(46, 46, 46, 10, false)
+oceanIslands = skyIslands.addSkyIslands(96, 96, 96, 8, false)
 oceanIslands.setWaterHeight(8)
-oceanIslands.setHeightRange(35, 60)
+oceanIslands.setHeightRange(32, 64)
 oceanIslands.addType(oceanCoralium)
 
 //medium = skyIslands.addSkyIslands(50, 128, true)
-medium = skyIslands.addSkyIslands(26, 26, 26, 148, true)
-medium.setHeightRange(35, 65)
+medium = skyIslands.addSkyIslands(64, 64, 64, 128, true)
+medium.setHeightRange(32, 128)
 medium.addType(desertCinnabar)
 medium.addType(mesaGold)
 medium.addType(plainsCassiterite)
@@ -847,8 +847,8 @@ medium.addType(glacierGalena)
 
 //Adds sky islands. Arguments are horizontal radius, top height, bottom height, number of times to attempt to generate in each region, and whether each island should choose a random type (true), or if types should be used in order (false).
 //Raise up Mushroom Islands
-MushroomGettingHigh = skyIslands.addSkyIslands(26, 26, 26, 9, true)
-MushroomGettingHigh.setHeightRange(64, 74)
+MushroomGettingHigh = skyIslands.addSkyIslands(32, 32, 32, 8, true)
+MushroomGettingHigh.setHeightRange(32, 128)
 MushroomGettingHigh.addType(mushroom_islandLapis)
 
 //small = skyIslands.addSkyIslands(25, 64, true)

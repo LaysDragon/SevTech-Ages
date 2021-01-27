@@ -32,7 +32,7 @@ stone.setMainBlock(<minecraft:stone>)
 //Creates a new SkyIslandGenerator, sets its grid region size, and adds it to the generator list for the dimension.
 ////
 skyIslands = new SkyIslandGeneratorV2()
-skyIslands.setRegionSize(50)
+skyIslands.setRegionSize(64)
 addGenerator(skyIslands)
 
 Lapis1 = new SkyIslandType("beneath:the_beneath")
@@ -533,11 +533,11 @@ Galena2.setBlockInRange(<contenttweaker:sub_block_holder_0>, 0.73~0.77)
 
 //Adds sky islands. Arguments are radius, number of times to attempt to generate in each region, and whether each island should choose a random type (true), or if types should be used in order (false).
 //Spawn Island
-large = skyIslands.addSkyIslands(36, 36, 36, 1, false, 1)
+large = skyIslands.addSkyIslands(64, 64, 64, 1, false, 1)
 large.addType(spawn)
 
 //Non-spawn islands
-medium = skyIslands.addSkyIslands(26, 26, 26, 160, true)
+medium = skyIslands.addSkyIslands(32, 32, 32, 128, true)
 medium.setWaterHeight(3)
 medium.addType(Lapis1)
 medium.addType(Cinnabar1)
