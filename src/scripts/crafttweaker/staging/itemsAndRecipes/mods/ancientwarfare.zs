@@ -13,6 +13,10 @@ import scripts.crafttweaker.stages.stageDisabled;
 
 static stagedItems as IIngredient[][string] = {
 	stageThree.stage: [
+		<ancientwarfarenpc:npc_spawner:*>,
+		<ancientwarfarestructure:structure_builder_ticked:*>,
+		<ancientwarfare:research_note:*>,
+		<ancientwarfarestructure:protection_flag:*>,
 		<ancientwarfare:*:*>,
 		<ancientwarfarestructure:*:*>,
 		<ancientwarfarevehicle:*:*>,
