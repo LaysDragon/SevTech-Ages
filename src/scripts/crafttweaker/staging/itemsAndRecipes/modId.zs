@@ -29,6 +29,7 @@ static stagedMods as string[][string] = {
 		"thebetweenlands",
 		"twilightforest",
 		"uppers",
+// Additions by customs		
 		"minecolonies"
 	],
 
@@ -37,7 +38,12 @@ static stagedMods as string[][string] = {
 		"immersivetech",
 		"nex",
 		"vc",
-		"ancientwarfare"
+// Additions by customs		
+		"ancientwarfare",
+		"ancientwarfarestructure",
+		"ancientwarfarevehicle",
+		"ancientwarfarenpc",
+		"ancientwarfareautomation"
 	],
 
 	stageFour.stage : [

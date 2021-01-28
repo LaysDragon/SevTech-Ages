@@ -13,7 +13,11 @@ import scripts.crafttweaker.stages.stageDisabled;
 
 static stagedItems as IIngredient[][string] = {
 	stageThree.stage: [
-		<ancientwarfare:*:*>
+		<ancientwarfare:*:*>,
+		<ancientwarfarestructure:*:*>,
+		<ancientwarfarevehicle:*:*>,
+		<ancientwarfarenpc:*:*>,
+		<ancientwarfareautomation:*:*>
 	]
 };
 
