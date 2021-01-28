@@ -1,6 +1,6 @@
 printDefaultConfigs(false)
 printDocumentation(false)
-removeVanillaAdvancements(true)
+removeVanillaAdvancements(false)
 removeModAdvancements(false)
 forceReloadFunctions(true)
 keepAdvancements(["twilightforest", "thebetweenlands"])
