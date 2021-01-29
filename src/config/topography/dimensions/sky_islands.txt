@@ -806,7 +806,8 @@ oceanIslands2.setHeightRange(35, 60)
 oceanIslands2.addType(oceanCoralium)
 
 
-medium2 = skyIslands.addSkyIslands(146, 26, 26, 1, true)
+
+medium2 = skyIslands.addSkyIslands(146, 56, 56, 1, true)
 medium2.setHeightRange(35, 65)
 medium2.addType(desertCinnabar)
 medium2.addType(mesaGold)
@@ -853,7 +854,7 @@ medium2.addType(glacierGalena)
 
 
 
-medium3 = skyIslands.addSkyIslands(126, 26, 26, 2, true)
+medium3 = skyIslands.addSkyIslands(126, 51, 51, 2, true)
 medium3.setHeightRange(35, 65)
 medium3.addType(desertCinnabar)
 medium3.addType(mesaGold)
@@ -900,7 +901,7 @@ medium3.addType(glacierGalena)
 
 
 
-medium4 = skyIslands.addSkyIslands(106, 26, 26, 5, true)
+medium4 = skyIslands.addSkyIslands(96, 46, 46, 4, true)
 medium4.setHeightRange(35, 65)
 medium4.addType(desertCinnabar)
 medium4.addType(mesaGold)
@@ -947,7 +948,7 @@ medium4.addType(glacierGalena)
 
 
 
-medium5 = skyIslands.addSkyIslands(86, 26, 26, 13, true)
+medium5 = skyIslands.addSkyIslands(66, 41, 41, 15, true)
 medium5.setHeightRange(35, 65)
 medium5.addType(desertCinnabar)
 medium5.addType(mesaGold)
@@ -994,7 +995,7 @@ medium5.addType(glacierGalena)
 
 
 
-medium6 = skyIslands.addSkyIslands(66, 26, 26, 29, true)
+medium6 = skyIslands.addSkyIslands(56, 36, 36, 44, true)
 medium6.setHeightRange(35, 65)
 medium6.addType(desertCinnabar)
 medium6.addType(mesaGold)
@@ -1041,7 +1042,7 @@ medium6.addType(glacierGalena)
 
 
 
-medium7 = skyIslands.addSkyIslands(46, 26, 26, 66, true)
+medium7 = skyIslands.addSkyIslands(46, 31, 31, 66, true)
 medium7.setHeightRange(35, 65)
 medium7.addType(desertCinnabar)
 medium7.addType(mesaGold)
@@ -1088,8 +1089,12 @@ medium7.addType(glacierGalena)
 
 
 
+
+
+
+
 //medium = skyIslands.addSkyIslands(50, 128, true)
-medium = skyIslands.addSkyIslands(26, 26, 26, 148, true)
+medium = skyIslands.addSkyIslands(26, 26, 26, 74, true)
 medium.setHeightRange(35, 65)
 medium.addType(desertCinnabar)
 medium.addType(mesaGold)
