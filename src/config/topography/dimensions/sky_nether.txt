@@ -93,16 +93,16 @@ torrid_wasteland.setBlockInRange(<nex:quartz_ore>, 0.38~0.44)
 //Creates a new SkyIslandGenerator, sets its grid region size, and adds it to the generator list for the dimension.
 ////
 skyIslands = new SkyIslandGeneratorV2()
-skyIslands.setRegionSize(64)
+skyIslands.setRegionSize(50)
 addGenerator(skyIslands)
 
 //Adds sky islands. Arguments are radius, number of times to attempt to generate in each region, and whether each island should choose a random type (true), or if types should be used in order (false).
 //Spawn biome
-large = skyIslands.addSkyIslands(64, 64, 64, 1, false, 1)
+large = skyIslands.addSkyIslands(36, 36, 36, 1, false, 1)
 large.addType(spawn)
 
 //medium = skyIslands.addSkyIslands(50, 50, 50, 128, true)
-medium = skyIslands.addSkyIslands(32, 32, 32, 128, true)
+medium = skyIslands.addSkyIslands(26, 26, 26, 148, true)
 medium.setWaterHeight(3)
 medium.addType(hell)
 medium.addType(hell)
