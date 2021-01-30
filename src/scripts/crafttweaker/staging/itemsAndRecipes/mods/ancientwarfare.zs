@@ -13,28 +13,40 @@ import scripts.crafttweaker.stages.stageDisabled;
 
 static stagedItems as IIngredient[][string] = {
 	stageThree.stage: [
-//		<ancientwarfarenpc:npc_spawner:0>,
-//		<ancientwarfarestructure:structure_builder_ticked:0>,
-//		<ancientwarfare:research_note:0>,
-//		<ancientwarfarestructure:protection_flag:0>,
-		<ancientwarfare:*:*>,
-		<ancientwarfarestructure:*:*>,
-		<ancientwarfarevehicle:*:*>,
-		<ancientwarfarenpc:*:*>,
-		<ancientwarfareautomation:*:*>
 	]
 };
 
-function init() {
-	var modId as string = stagedItems.entrySet[0].value[0].items[0].definition.owner;
+static hiddenItems as IIngredient[] = [
+	// <ancientwarfarenpc:npc_spawner:*>,
+	// <ancientwarfarestructure:structure_builder_ticked:*>,
+	// <ancientwarfarestructure:altar_long_cloth:*>,
+	// <ancientwarfarestructure:altar_candle:*>,
+	// <ancientwarfarestructure:protection_flag:*>,
+	// <ancientwarfarestructure:altar_short_cloth:*>
+];
 
-	var modStage as string = scripts.crafttweaker.staging.itemsAndRecipes.modId.containsMod(modId);
-	var doOverride as bool = modStage != "";
+static hiddenRemove as IIngredient[] = [
+];
+
+
+function init() {
+	var modIds as string[] = ["ancientwarfare","ancientwarfarestructure","ancientwarfarevehicle","ancientwarfarenpc","ancientwarfareautomation"];
+
+	var modStages as string[string] = [];scripts.crafttweaker.staging.itemsAndRecipes.modId.containsMod(modId);
+	var doOverrides as bool[string] = [];modStage != "";
+
+	for id in modIds{
+		modStages[id] = scripts.crafttweaker.staging.itemsAndRecipes.modId.containsMod(id);
+		doOverrides[id] = (modStages[id] != "");
+	}
 
 	for stageName, items in stagedItems {
-		if (doOverride && stageName != modStage) {
-			ZenStager.addModItemOverrides(modId, items);
+		for item in items{
+			if (doOverrides[item.items[0].definition.owner] && stageName != modStages[item.items[0].definition.owner]) {
+				ZenStager.addModItemOverrides(modId, item);
+			}
 		}
+
 
 		ZenStager.getStage(stageName).addIngredients(items);
 	}
