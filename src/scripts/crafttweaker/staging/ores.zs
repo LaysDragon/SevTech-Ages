@@ -40,7 +40,6 @@ static replacementItemsForStage as IIngredient[][][string] = {
 		[<abyssalcraft:dltstairs:*>, <abyssalcraft:dltplank:0>],
 		[<abyssalcraft:dcstairs:*>, <abyssalcraft:cobblestone:0>],
 		[<minecraft:fence:*>, <minecraft:planks:0>],
-		[<minecraft:crafting_table:*>, <minecraft:planks:0>],
 
 		[<betterwithmods:wood_table:*>, <minecraft:planks:0>],
 
@@ -50,10 +49,6 @@ static replacementItemsForStage as IIngredient[][][string] = {
 		[<minecraft:dark_oak_stairs:*>, <minecraft:planks:5>],
 		[<minecraft:acacia_stairs:*>, <minecraft:planks:4>],
 		[<minecraft:sandstone_stairs:*>, <minecraft:sandstone:2>],
-
-		//millenaire
-		[<millenaire:bed_straw:*>, <minecraft:wooden_slab:0>],
-		[<millenaire:bed_charpoy:*>, <minecraft:wooden_slab:0>],
 
 		// Coal
 		[<minecraft:coal_ore:0>],
