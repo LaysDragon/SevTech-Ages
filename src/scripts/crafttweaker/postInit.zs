@@ -177,6 +177,12 @@ function initItemsAndRecipesStaging() {
 	scripts.crafttweaker.staging.itemsAndRecipes.mods.wopper.init();
 	scripts.crafttweaker.staging.itemsAndRecipes.mods.xnet.init();
 	scripts.crafttweaker.staging.itemsAndRecipes.mods.yoyos.init();
+
+	//custom mod
+    scripts.crafttweaker.staging.itemsAndRecipes.mods.minecolonies.init();
+    scripts.crafttweaker.staging.itemsAndRecipes.mods.millenaire.init();
+    scripts.crafttweaker.staging.itemsAndRecipes.mods.ancientwarfare.init();
+    scripts.crafttweaker.staging.itemsAndRecipes.mods.grimoireofgaia.init();
 }
 
 function initRecipes() {
