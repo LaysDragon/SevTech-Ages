@@ -13,12 +13,18 @@ import scripts.crafttweaker.stages.stageDisabled;
 
 static stagedItems as IIngredient[][string] = {
 	stageOne.stage: [
-		<grimoireofgaia:*:*>
+		// <grimoireofgaia:*:*>
 	]
 };
 
+static hiddenItems as IIngredient[] = [
+];
+
+static hiddenRemove as IIngredient[] = [
+];
+
 function init() {
-	var modId as string = stagedItems.entrySet[0].value[0].items[0].definition.owner;
+	var modId as string = "grimoireofgaia"; //stagedItems.entrySet[0].value[0].items[0].definition.owner;
 
 	var modStage as string = scripts.crafttweaker.staging.itemsAndRecipes.modId.containsMod(modId);
 	var doOverride as bool = modStage != "";
