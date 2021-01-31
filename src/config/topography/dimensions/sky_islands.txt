@@ -794,24 +794,12 @@ addGenerator(skyIslands)
 
 
 
-
-
-
-
-
 ////Custom
 skySpecialSizeIslands = new SkyIslandGeneratorV2()
 skySpecialSizeIslands.setRegionSize(100)
 skySpecialSizeIslands.enableBWMVillageCompat()
 skySpecialSizeIslands.enableBWMMineshaftCompat()
 addGenerator(skySpecialSizeIslands)
-
-//default-radio count min-count
-largeMillenaire = skyIslands.addMillenaireSkyIslands(30,100,1)
-largeMillenaire.setResizeRatioBound(1.4~1.8)
-
-
-
 
 
 
@@ -1321,8 +1309,10 @@ mediumCustom2.addType(glacierGalena)
 
 
 
-
-
+////Custom
+//default-radio count min-count
+largeMillenaire = skySpecialSizeIslands.addMillenaireSkyIslands(30,100,1)
+largeMillenaire.setResizeRatioBound(1.4~1.8)
 //Adds a SkyIslandType we created above to the island generator.
 largeMillenaire.addType(desertCinnabar)
 largeMillenaire.addType(mesaGold)
