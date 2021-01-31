@@ -777,6 +777,9 @@ galena_sample.addRequiredBlock(<minecraft:packed_ice>)
 galena_sample.setHeight(35, 90)
 glacierGalena.addGenerator(galena_sample)
 
+
+
+
 ////
 //Creates a new SkyIslandGeneratorV2, sets its grid region size, and adds it to the generator list for the dimension.
 ////
@@ -786,16 +789,39 @@ skyIslands.enableBWMVillageCompat()
 skyIslands.enableBWMMineshaftCompat()
 addGenerator(skyIslands)
 
-//Custom Special Size SkyIsland
+
+
+
+
+
+
+
+
+
+
+////Custom
 skySpecialSizeIslands = new SkyIslandGeneratorV2()
 skySpecialSizeIslands.setRegionSize(100)
 skySpecialSizeIslands.enableBWMVillageCompat()
 skySpecialSizeIslands.enableBWMMineshaftCompat()
 addGenerator(skySpecialSizeIslands)
 
+//default-radio count min-count
+largeMillenaire = skyIslands.addMillenaireSkyIslands(30,100,1)
+largeMillenaire.setResizeRatioBound(1.4~1.8)
+
+
+
+
+
+
+
+
+
+
 //Adds sky islands. Arguments are horizontal radius, top height, bottom height, number of times to attempt to generate in each region, and whether each island should choose a random type (true), or if types should be used in order (false).
 //Spawn biomes
-large = skyIslands.addSkyIslands(30, 30, 30, 1, false, 1)
+large = skyIslands.addSkyIslands(36, 36, 36, 1, false, 1)
 large.setWaterHeight(3)
 large.setHeightRange(70, 80)
 large.addType(spawn)
@@ -806,25 +832,104 @@ oceanIslands.setWaterHeight(8)
 oceanIslands.setHeightRange(35, 60)
 oceanIslands.addType(oceanCoralium)
 
+
+
+
+
+
+
 //Ocean islands. Separate so they can be larger and have deeper water
 oceanIslands2 = skyIslands.addSkyIslands(92, 56, 56, 2, false)
 oceanIslands2.setWaterHeight(8)
 oceanIslands2.setHeightRange(35, 60)
 oceanIslands2.addType(oceanCoralium)
 
-//Custom
-//Ocean islands. Separate so they can be larger and have deeper water
-oceanIslands = skySpecialSizeIslands.addSkyIslands(16, 16, 16, 4, false)
-oceanIslands.setWaterHeight(8)
-oceanIslands.setHeightRange(35, 60)
-oceanIslands.addType(oceanCoralium)
 
-//Custom
+
+
+
+
+
+
+
+////Custom
 //Ocean islands. Separate so they can be larger and have deeper water
-oceanIslands = skySpecialSizeIslands.addSkyIslands(256, 64, 64, 4, false)
-oceanIslands.setWaterHeight(8)
-oceanIslands.setHeightRange(35, 60)
-oceanIslands.addType(oceanCoralium)
+oceanIslandsCustom1 = skySpecialSizeIslands.addSkyIslands(16, 16, 16, 4, false)
+oceanIslandsCustom1.setWaterHeight(8)
+oceanIslandsCustom1.setHeightRange(35, 60)
+oceanIslandsCustom1.addType(oceanCoralium)
+
+////Custom
+//Ocean islands. Separate so they can be larger and have deeper water
+oceanIslandsCustom2 = skySpecialSizeIslands.addSkyIslands(256, 64, 64, 4, false)
+oceanIslandsCustom2.setWaterHeight(8)
+oceanIslandsCustom2.setHeightRange(35, 60)
+oceanIslandsCustom2.addType(oceanCoralium)
+
+
+
+
+
+
+
+
+
+
+//medium = skyIslands.addSkyIslands(50, 128, true)
+medium = skyIslands.addSkyIslands(26, 26, 26, 74, true)
+medium.setHeightRange(35, 65)
+medium.addType(desertCinnabar)
+medium.addType(mesaGold)
+medium.addType(plainsCassiterite)
+medium.addType(plainsHematite)
+medium.addType(mutated_plainsSilicon)
+medium.addType(woodlandsBauxite)
+medium.addType(rocky_plateauPlatinum)
+medium.addType(jungleLimonite)
+medium.addType(jungleSilicon)
+medium.addType(swamplandHematite)
+medium.addType(swamplandLapis)
+medium.addType(mini_jungleBauxite)
+medium.addType(badlandsGold)
+medium.addType(savannaTeallite)
+medium.addType(savannaHematite)
+medium.addType(forestCoal)
+medium.addType(forestMalachite)
+medium.addType(birch_forestCassiterite)
+medium.addType(mutated_forestOsmium)
+medium.addType(mutated_birch_forestBauxite)
+medium.addType(autumnal_woodsLimonite)
+medium.addType(biome_meneglinQuartz)
+medium.addType(meadowHematite)
+medium.addType(roofed_forestCoal)
+medium.addType(roofed_forestTeallite)
+medium.addType(temperate_rainforestLapis)
+medium.addType(lush_hillsQuartz)
+medium.addType(green_swampLapis)
+medium.addType(extreme_hills_with_treesBeryl)
+medium.addType(darklands_forestAzurite)
+medium.addType(darklands_forestGalena)
+medium.addType(darklandsCoal)
+medium.addType(darklandsAzurite)
+medium.addType(taigaMundane)
+medium.addType(coralium_infested_swampAutunite)
+medium.addType(mutated_redwood_taigaMundane)
+medium.addType(redwood_taiga_hillsCinnabar)
+medium.addType(mutated_ice_flatsOsmium)
+medium.addType(taiga_coldRockCrystal)
+medium.addType(snowy_coniferous_forestRockCrystal)
+medium.addType(glacier_spikesKimberlite)
+medium.addType(glacierGalena)
+
+
+
+
+
+
+
+
+
+
 
 
 medium2 = skyIslands.addSkyIslands(146, 56, 56, 1, true)
@@ -1113,55 +1218,15 @@ medium7.addType(glacierGalena)
 
 
 
-//medium = skyIslands.addSkyIslands(50, 128, true)
-medium = skyIslands.addSkyIslands(26, 26, 26, 74, true)
-medium.setHeightRange(35, 65)
-medium.addType(desertCinnabar)
-medium.addType(mesaGold)
-medium.addType(plainsCassiterite)
-medium.addType(plainsHematite)
-medium.addType(mutated_plainsSilicon)
-medium.addType(woodlandsBauxite)
-medium.addType(rocky_plateauPlatinum)
-medium.addType(jungleLimonite)
-medium.addType(jungleSilicon)
-medium.addType(swamplandHematite)
-medium.addType(swamplandLapis)
-medium.addType(mini_jungleBauxite)
-medium.addType(badlandsGold)
-medium.addType(savannaTeallite)
-medium.addType(savannaHematite)
-medium.addType(forestCoal)
-medium.addType(forestMalachite)
-medium.addType(birch_forestCassiterite)
-medium.addType(mutated_forestOsmium)
-medium.addType(mutated_birch_forestBauxite)
-medium.addType(autumnal_woodsLimonite)
-medium.addType(biome_meneglinQuartz)
-medium.addType(meadowHematite)
-medium.addType(roofed_forestCoal)
-medium.addType(roofed_forestTeallite)
-medium.addType(temperate_rainforestLapis)
-medium.addType(lush_hillsQuartz)
-medium.addType(green_swampLapis)
-medium.addType(extreme_hills_with_treesBeryl)
-medium.addType(darklands_forestAzurite)
-medium.addType(darklands_forestGalena)
-medium.addType(darklandsCoal)
-medium.addType(darklandsAzurite)
-medium.addType(taigaMundane)
-medium.addType(coralium_infested_swampAutunite)
-medium.addType(mutated_redwood_taigaMundane)
-medium.addType(redwood_taiga_hillsCinnabar)
-medium.addType(mutated_ice_flatsOsmium)
-medium.addType(taiga_coldRockCrystal)
-medium.addType(snowy_coniferous_forestRockCrystal)
-medium.addType(glacier_spikesKimberlite)
-medium.addType(glacierGalena)
 
 
 
-//Custom
+
+
+
+
+
+////Custom
 //medium1 = addskySpecialSizeIslands.addskySpecialSizeIslands(50, 128, true)
 mediumCustom1 = addskySpecialSizeIslands.addSkyIslands(16, 16, 16, 37, true)
 mediumCustom1.setHeightRange(35, 65)
@@ -1253,6 +1318,58 @@ mediumCustom2.addType(taiga_coldRockCrystal)
 mediumCustom2.addType(snowy_coniferous_forestRockCrystal)
 mediumCustom2.addType(glacier_spikesKimberlite)
 mediumCustom2.addType(glacierGalena)
+
+
+
+
+
+//Adds a SkyIslandType we created above to the island generator.
+largeMillenaire.addType(desertCinnabar)
+largeMillenaire.addType(mesaGold)
+largeMillenaire.addType(plainsCassiterite)
+largeMillenaire.addType(plainsHematite)
+largeMillenaire.addType(mutated_plainsSilicon)
+largeMillenaire.addType(woodlandsBauxite)
+largeMillenaire.addType(rocky_plateauPlatinum)
+largeMillenaire.addType(jungleLimonite)
+largeMillenaire.addType(jungleSilicon)
+largeMillenaire.addType(swamplandHematite)
+largeMillenaire.addType(swamplandLapis)
+largeMillenaire.addType(mini_jungleBauxite)
+largeMillenaire.addType(badlandsGold)
+largeMillenaire.addType(savannaTeallite)
+largeMillenaire.addType(savannaHematite)
+largeMillenaire.addType(forestCoal)
+largeMillenaire.addType(forestMalachite)
+largeMillenaire.addType(birch_forestCassiterite)
+largeMillenaire.addType(mutated_forestOsmium)
+largeMillenaire.addType(mutated_birch_forestBauxite)
+largeMillenaire.addType(autumnal_woodsLimonite)
+largeMillenaire.addType(biome_meneglinQuartz)
+largeMillenaire.addType(meadowHematite)
+largeMillenaire.addType(roofed_forestCoal)
+largeMillenaire.addType(roofed_forestTeallite)
+largeMillenaire.addType(temperate_rainforestLapis)
+largeMillenaire.addType(lush_hillsQuartz)
+largeMillenaire.addType(green_swampLapis)
+largeMillenaire.addType(extreme_hills_with_treesBeryl)
+largeMillenaire.addType(darklands_forestAzurite)
+largeMillenaire.addType(darklands_forestGalena)
+largeMillenaire.addType(darklandsCoal)
+largeMillenaire.addType(darklandsAzurite)
+largeMillenaire.addType(taigaMundane)
+largeMillenaire.addType(coralium_infested_swampAutunite)
+largeMillenaire.addType(mutated_redwood_taigaMundane)
+largeMillenaire.addType(redwood_taiga_hillsCinnabar)
+largeMillenaire.addType(mutated_ice_flatsOsmium)
+largeMillenaire.addType(taiga_coldRockCrystal)
+largeMillenaire.addType(snowy_coniferous_forestRockCrystal)
+largeMillenaire.addType(glacier_spikesKimberlite)
+largeMillenaire.addType(glacierGalena)
+
+
+
+
 
 
 
