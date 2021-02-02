@@ -103,7 +103,7 @@ large.addType(spawn)
 
 //medium = skyIslands.addSkyIslands(50, 50, 50, 128, true)
 medium = skyIslands.addSkyIslands(26, 26, 26, 148, true)
-medium.setWaterHeight(3)
+medium.setFluidDepth(3)
 medium.addType(hell)
 medium.addType(hell)
 medium.addType(hell)
