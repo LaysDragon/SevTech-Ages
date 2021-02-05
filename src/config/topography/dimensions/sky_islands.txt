@@ -819,6 +819,7 @@ large.setHeightRange(32, 64)
 large.addType(spawn)
 
 //Ocean islands. Separate so they can be larger and have deeper water
+//count,maxVerticalRadius,interpolation, randomTypes
 oceanIslands = skyIslands.addRandomSizeSkyIslands(50,64,true,true)
 oceanIslands.clearScale()
 //oceanIslands.addScale(8, 1);
@@ -836,6 +837,7 @@ oceanIslands.addType(oceanCoralium)
 
 ////Custom
 //Ocean islands. Separate so they can be larger and have deeper water
+//count,maxVerticalRadius,interpolation, randomTypes
 oceanIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(50,64,true,true)
 oceanIslands.clearScale()
 oceanIslands.addScale(8, 10);
@@ -906,6 +908,7 @@ medium.addType(glacierGalena)
 
 ////Custom
 //medium1 = addskySpecialSizeIslands.addskySpecialSizeIslands(50, 128, true)
+//count,maxVerticalRadius,interpolation, randomTypes
 mediumCustom = skySpecialSizeIslands.addRandomSizeSkyIslands(100,64,true,true)
 large.clearScale()
 large.addScale(8, 10);
