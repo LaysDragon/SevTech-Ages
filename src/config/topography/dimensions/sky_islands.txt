@@ -800,7 +800,7 @@ addGenerator(skySpecialSizeIslands)
 
 
 //count,maxVerticalRadius,interpolation, randomTypes
-large = skyIslands.addRandomSizeSkyIslands(10,64,true,true)
+large = skyIslands.addRandomSizeSkyIslands(1,64,true,true)
 large.clearScale()
 //large.addScale(8, 1);
 large.addScale(16, 10);
@@ -910,9 +910,9 @@ medium.addType(glacierGalena)
 //medium1 = addskySpecialSizeIslands.addskySpecialSizeIslands(50, 128, true)
 //count,maxVerticalRadius,interpolation, randomTypes
 mediumCustom = skySpecialSizeIslands.addRandomSizeSkyIslands(100,64,true,true)
-large.clearScale()
-large.addScale(8, 10);
-large.addScale(512, 10);
+mediumCustom.clearScale()
+mediumCustom.addScale(8, 10);
+mediumCustom.addScale(512, 10);
 mediumCustom.setHeightRange(32, 64)
 
 mediumCustom.addType(desertCinnabar)
