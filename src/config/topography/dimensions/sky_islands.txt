@@ -793,12 +793,11 @@ addGenerator(skyIslands)
 //------------------spawn-------------------
 
 //count,maxVerticalRadius,interpolation, randomTypes
-spawnIsland = skyIslands.addRandomSizeSkyIslands(1,64,true,true)
+spawnIsland = skyIslands.addRandomSizeSkyIslands(1,64,true,false)
 spawnIsland.clearScale()
-spawnIsland.addScale(25, 40);
-spawnIsland.addScale(35, 60);
-
-
+spawnIsland.addScale(20, 20);
+spawnIsland.addScale(30, 80);
+spawnIsland.addScale(40, 30);
 
 //Adds sky islands. Arguments are horizontal radius, top height, bottom height, number of times to attempt to generate in each region, and whether each island should choose a random type (true), or if types should be used in order (false).
 //Spawn biomes
@@ -810,12 +809,13 @@ spawnIsland.addType(spawn)
 
 //Ocean islands. Separate so they can be larger and have deeper water
 //count,maxVerticalRadius,interpolation, randomTypes
-oceanIslands = skyIslands.addRandomSizeSkyIslands(10,64,false,true)
+//800格刷5个海洋
+oceanIslands = skyIslands.addRandomSizeSkyIslands(5,64,false,true)
 
 oceanIslands.clearScale()
-oceanIslands.addScale(16, 10);
+// oceanIslands.addScale(8, 10);
 oceanIslands.addScale(32, 40);
-oceanIslands.addScale(46, 50);
+oceanIslands.addScale(48, 40);
 oceanIslands.addScale(128, 10);
 
 
@@ -832,8 +832,8 @@ medium = skyIslands.addRandomSizeSkyIslands(100, 64, true, true)
 
 medium.clearScale()
 medium.addScale(16, 10);
-medium.addScale(32, 40);
-medium.addScale(64, 60);
+medium.addScale(32, 100);
+medium.addScale(64, 30);
 
 medium.setHeightRange(32, 64)
 
@@ -881,66 +881,16 @@ medium.addType(glacier_spikesKimberlite)
 medium.addType(glacierGalena)
 
 
-//------------------largeMillenaireIslands-------------------
-////Custom
-//default-radio count min-count
-//fallback radius,maxBottomHeight,topHeight,maxFluidPercentage, count, minCount,randomType
-largeMillenaireIslands = skyIslands.addMillenaireSkyIslands(10, 90, 50, 0.4, 100, 1, true)
-
-largeMillenaireIslands.setResizeRatioBound(1.4~1.8)
-
-
-
-//Adds a SkyIslandType we created above to the island generator.
-largeMillenaireIslands.addType(desertCinnabar)
-largeMillenaireIslands.addType(mesaGold)
-largeMillenaireIslands.addType(plainsCassiterite)
-largeMillenaireIslands.addType(plainsHematite)
-largeMillenaireIslands.addType(mutated_plainsSilicon)
-largeMillenaireIslands.addType(woodlandsBauxite)
-largeMillenaireIslands.addType(rocky_plateauPlatinum)
-largeMillenaireIslands.addType(jungleLimonite)
-largeMillenaireIslands.addType(jungleSilicon)
-largeMillenaireIslands.addType(swamplandHematite)
-largeMillenaireIslands.addType(swamplandLapis)
-largeMillenaireIslands.addType(mini_jungleBauxite)
-largeMillenaireIslands.addType(badlandsGold)
-largeMillenaireIslands.addType(savannaTeallite)
-largeMillenaireIslands.addType(savannaHematite)
-largeMillenaireIslands.addType(forestCoal)
-largeMillenaireIslands.addType(forestMalachite)
-largeMillenaireIslands.addType(birch_forestCassiterite)
-largeMillenaireIslands.addType(mutated_forestOsmium)
-largeMillenaireIslands.addType(mutated_birch_forestBauxite)
-largeMillenaireIslands.addType(autumnal_woodsLimonite)
-largeMillenaireIslands.addType(biome_meneglinQuartz)
-largeMillenaireIslands.addType(meadowHematite)
-largeMillenaireIslands.addType(roofed_forestCoal)
-largeMillenaireIslands.addType(roofed_forestTeallite)
-largeMillenaireIslands.addType(temperate_rainforestLapis)
-largeMillenaireIslands.addType(lush_hillsQuartz)
-largeMillenaireIslands.addType(green_swampLapis)
-largeMillenaireIslands.addType(extreme_hills_with_treesBeryl)
-largeMillenaireIslands.addType(darklands_forestAzurite)
-largeMillenaireIslands.addType(darklands_forestGalena)
-largeMillenaireIslands.addType(darklandsCoal)
-largeMillenaireIslands.addType(darklandsAzurite)
-largeMillenaireIslands.addType(taigaMundane)
-largeMillenaireIslands.addType(coralium_infested_swampAutunite)
-largeMillenaireIslands.addType(mutated_redwood_taigaMundane)
-largeMillenaireIslands.addType(redwood_taiga_hillsCinnabar)
-//largeMillenaireIslands.addType(mutated_ice_flatsOsmium)
-largeMillenaireIslands.addType(taiga_coldRockCrystal)
-largeMillenaireIslands.addType(snowy_coniferous_forestRockCrystal)
-largeMillenaireIslands.addType(glacier_spikesKimberlite)
-largeMillenaireIslands.addType(glacierGalena)
-
 //---- other ----
 //small = skyIslands.addSkyIslands(25, 64, true)
 //small.addType()
 //
 //tiny = skyIslands.addSkyIslands(10, 128, true)
 //tiny.addType(mushroom_island)
+
+
+
+
 
 
 //=========================skySpecialSizeIslands================================
@@ -961,10 +911,12 @@ addGenerator(skySpecialSizeIslands)
 ////Custom
 //Ocean islands. Separate so they can be larger and have deeper water
 //count,maxVerticalRadius,interpolation, randomTypes
-oceanSpecialSizeIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(50,64,true,true)
+oceanSpecialSizeIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(5,64,false,false)
+
 oceanSpecialSizeIslands.clearScale()
 oceanSpecialSizeIslands.addScale(8, 10);
-oceanSpecialSizeIslands.addScale(512, 10);
+oceanSpecialSizeIslands.addScale(256, 10);
+
 oceanSpecialSizeIslands.setFluidDepth(8)
 oceanSpecialSizeIslands.setHeightRange(32, 64)
 oceanSpecialSizeIslands.addType(oceanCoralium)
@@ -974,13 +926,14 @@ oceanSpecialSizeIslands.addType(oceanCoralium)
 ////Custom
 //medium1 = addskySpecialSizeIslands.addskySpecialSizeIslands(50, 128, true)
 //count,maxVerticalRadius,interpolation, randomTypes
-mediumSpecialSizeIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(100,64,false,true)
+mediumSpecialSizeIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(20,64,false,true)
 
 mediumSpecialSizeIslands.clearScale()
-mediumSpecialSizeIslands.addScale(8, 10);
-mediumSpecialSizeIslands.addScale(128, 10);
-mediumSpecialSizeIslands.addScale(256, 10);
-mediumSpecialSizeIslands.addScale(512, 10);
+mediumSpecialSizeIslands.addScale(8, 5);
+mediumSpecialSizeIslands.addScale(16, 20);
+mediumSpecialSizeIslands.addScale(128, 50);
+mediumSpecialSizeIslands.addScale(256, 20);
+mediumSpecialSizeIslands.addScale(512, 5);
 
 mediumSpecialSizeIslands.setHeightRange(32, 64)
 
@@ -1035,13 +988,79 @@ mediumSpecialSizeIslands.addType(glacierGalena)
 //Adds sky islands. Arguments are horizontal radius, top height, bottom height, number of times to attempt to generate in each region, and whether each island should choose a random type (true), or if types should be used in order (false).
 //Raise up Mushroom Islands
 //MushroomGettingHigh = skyIslands.addSkyIslands(26, 26, 26, 9, true)
-MushroomGettingHigh = skyIslands.addRandomSizeSkyIslands(10,64,true,true)
+MushroomGettingHigh = skyIslands.addRandomSizeSkyIslands(5,64,true,true)
 MushroomGettingHigh.clearScale()
 MushroomGettingHigh.addScale(4, 10);
 MushroomGettingHigh.addScale(8, 30);
 MushroomGettingHigh.addScale(16, 10);
 MushroomGettingHigh.setHeightRange(32, 64)
 MushroomGettingHigh.addType(mushroom_islandLapis)
+
+
+//=========================millenaireSkyIslandsGenerator================================
+
+////
+//Creates a new SkyIslandGeneratorV2, sets its grid region size, and adds it to the generator list for the dimension.
+////
+millenaireSkyIslandsGenerator = new SkyIslandGeneratorV2()
+millenaireSkyIslandsGenerator.setRegionSize(100)
+millenaireSkyIslandsGenerator.enableBWMVillageCompat()
+millenaireSkyIslandsGenerator.enableBWMMineshaftCompat()
+addGenerator(millenaireSkyIslandsGenerator)
+
+//------------------largeMillenaireIslands-------------------
+////Custom
+//default-radio count min-count
+//fallback radius,maxBottomHeight,topHeight,maxFluidPercentage, count, minCount,randomType
+largeMillenaireIslands = millenaireSkyIslandsGenerator.addMillenaireSkyIslands(1, 90, 50, 0.4, 100, 1, true)
+
+largeMillenaireIslands.setResizeRatioBound(1.4~1.8)
+
+
+
+//Adds a SkyIslandType we created above to the island generator.
+largeMillenaireIslands.addType(desertCinnabar)
+largeMillenaireIslands.addType(mesaGold)
+largeMillenaireIslands.addType(plainsCassiterite)
+largeMillenaireIslands.addType(plainsHematite)
+largeMillenaireIslands.addType(mutated_plainsSilicon)
+largeMillenaireIslands.addType(woodlandsBauxite)
+largeMillenaireIslands.addType(rocky_plateauPlatinum)
+largeMillenaireIslands.addType(jungleLimonite)
+largeMillenaireIslands.addType(jungleSilicon)
+largeMillenaireIslands.addType(swamplandHematite)
+largeMillenaireIslands.addType(swamplandLapis)
+largeMillenaireIslands.addType(mini_jungleBauxite)
+largeMillenaireIslands.addType(badlandsGold)
+largeMillenaireIslands.addType(savannaTeallite)
+largeMillenaireIslands.addType(savannaHematite)
+largeMillenaireIslands.addType(forestCoal)
+largeMillenaireIslands.addType(forestMalachite)
+largeMillenaireIslands.addType(birch_forestCassiterite)
+largeMillenaireIslands.addType(mutated_forestOsmium)
+largeMillenaireIslands.addType(mutated_birch_forestBauxite)
+largeMillenaireIslands.addType(autumnal_woodsLimonite)
+largeMillenaireIslands.addType(biome_meneglinQuartz)
+largeMillenaireIslands.addType(meadowHematite)
+largeMillenaireIslands.addType(roofed_forestCoal)
+largeMillenaireIslands.addType(roofed_forestTeallite)
+largeMillenaireIslands.addType(temperate_rainforestLapis)
+largeMillenaireIslands.addType(lush_hillsQuartz)
+largeMillenaireIslands.addType(green_swampLapis)
+largeMillenaireIslands.addType(extreme_hills_with_treesBeryl)
+largeMillenaireIslands.addType(darklands_forestAzurite)
+largeMillenaireIslands.addType(darklands_forestGalena)
+largeMillenaireIslands.addType(darklandsCoal)
+largeMillenaireIslands.addType(darklandsAzurite)
+largeMillenaireIslands.addType(taigaMundane)
+largeMillenaireIslands.addType(coralium_infested_swampAutunite)
+largeMillenaireIslands.addType(mutated_redwood_taigaMundane)
+largeMillenaireIslands.addType(redwood_taiga_hillsCinnabar)
+//largeMillenaireIslands.addType(mutated_ice_flatsOsmium)
+largeMillenaireIslands.addType(taiga_coldRockCrystal)
+largeMillenaireIslands.addType(snowy_coniferous_forestRockCrystal)
+largeMillenaireIslands.addType(glacier_spikesKimberlite)
+largeMillenaireIslands.addType(glacierGalena)
 
 
 //========= other ========
