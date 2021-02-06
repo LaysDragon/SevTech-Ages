@@ -41,6 +41,7 @@ static replacementItemsForStage as IIngredient[][][string] = {
 		[<abyssalcraft:dcstairs:*>, <abyssalcraft:cobblestone:0>],
 		[<minecraft:fence:*>, <minecraft:planks:0>],
 		[<minecraft:crafting_table:*>, <minecraft:planks:0>],
+		[<minecraft:furnace:*>, <minecraft:cobblestone:0>],
 
 		[<betterwithmods:wood_table:*>, <minecraft:planks:0>],
 
