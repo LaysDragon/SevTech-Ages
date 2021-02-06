@@ -784,7 +784,7 @@ glacierGalena.addGenerator(galena_sample)
 //Creates a new SkyIslandGeneratorV2, sets its grid region size, and adds it to the generator list for the dimension.
 ////
 skyIslands = new SkyIslandGeneratorV2()
-skyIslands.setRegionSize(50)
+skyIslands.setRegionSize(64)
 skyIslands.enableBWMVillageCompat()
 skyIslands.enableBWMMineshaftCompat()
 addGenerator(skyIslands)
@@ -802,7 +802,7 @@ spawnIsland.addScale(40, 30);
 //Adds sky islands. Arguments are horizontal radius, top height, bottom height, number of times to attempt to generate in each region, and whether each island should choose a random type (true), or if types should be used in order (false).
 //Spawn biomes
 spawnIsland.setFluidDepth(3)
-spawnIsland.setHeightRange(32, 64)
+spawnIsland.setHeightRange(32, 96)
 spawnIsland.addType(spawn)
 
 //------------------oceanIslands-------------------
@@ -810,17 +810,17 @@ spawnIsland.addType(spawn)
 //Ocean islands. Separate so they can be larger and have deeper water
 //count,maxVerticalRadius,interpolation, randomTypes
 //800格刷5个海洋
-oceanIslands = skyIslands.addRandomSizeSkyIslands(5,64,false,true)
+oceanIslands = skyIslands.addRandomSizeSkyIslands(4,64,false,true)
 
 oceanIslands.clearScale()
 // oceanIslands.addScale(8, 10);
-oceanIslands.addScale(32, 40);
+oceanIslands.addScale(16, 20);
 oceanIslands.addScale(48, 40);
 oceanIslands.addScale(128, 10);
 
 
 oceanIslands.setFluidDepth(8)
-oceanIslands.setHeightRange(32, 64)
+oceanIslands.setHeightRange(32, 96)
 
 oceanIslands.addType(oceanCoralium)
 
@@ -828,14 +828,14 @@ oceanIslands.addType(oceanCoralium)
 
 //medium = skyIslands.addSkyIslands(50, 128, true)
 //medium = skyIslands.addSkyIslands(26, 26, 26, 74, true)
-medium = skyIslands.addRandomSizeSkyIslands(100, 64, true, true)
+medium = skyIslands.addRandomSizeSkyIslands(64, 64, true, true)
 
 medium.clearScale()
-medium.addScale(16, 10);
-medium.addScale(32, 100);
+medium.addScale(16, 30);
+medium.addScale(32, 80);
 medium.addScale(64, 30);
 
-medium.setHeightRange(32, 64)
+medium.setHeightRange(32, 96)
 
 medium.addType(desertCinnabar)
 medium.addType(mesaGold)
@@ -900,7 +900,7 @@ medium.addType(glacierGalena)
 
 ////Custom
 skySpecialSizeIslands = new SkyIslandGeneratorV2()
-skySpecialSizeIslands.setRegionSize(100)
+skySpecialSizeIslands.setRegionSize(128)
 skySpecialSizeIslands.enableBWMVillageCompat()
 skySpecialSizeIslands.enableBWMMineshaftCompat()
 addGenerator(skySpecialSizeIslands)
@@ -911,14 +911,14 @@ addGenerator(skySpecialSizeIslands)
 ////Custom
 //Ocean islands. Separate so they can be larger and have deeper water
 //count,maxVerticalRadius,interpolation, randomTypes
-oceanSpecialSizeIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(5,64,false,false)
+oceanSpecialSizeIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(4,64,false,false)
 
 oceanSpecialSizeIslands.clearScale()
 oceanSpecialSizeIslands.addScale(8, 10);
 oceanSpecialSizeIslands.addScale(256, 10);
 
 oceanSpecialSizeIslands.setFluidDepth(8)
-oceanSpecialSizeIslands.setHeightRange(32, 64)
+oceanSpecialSizeIslands.setHeightRange(32, 96)
 oceanSpecialSizeIslands.addType(oceanCoralium)
 
 
@@ -926,16 +926,16 @@ oceanSpecialSizeIslands.addType(oceanCoralium)
 ////Custom
 //medium1 = addskySpecialSizeIslands.addskySpecialSizeIslands(50, 128, true)
 //count,maxVerticalRadius,interpolation, randomTypes
-mediumSpecialSizeIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(20,64,false,true)
+mediumSpecialSizeIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(32,64,false,true)
 
 mediumSpecialSizeIslands.clearScale()
-mediumSpecialSizeIslands.addScale(8, 5);
-mediumSpecialSizeIslands.addScale(16, 20);
-mediumSpecialSizeIslands.addScale(128, 50);
+mediumSpecialSizeIslands.addScale(8, 80);
+mediumSpecialSizeIslands.addScale(16, 120);
+mediumSpecialSizeIslands.addScale(128, 40);
 mediumSpecialSizeIslands.addScale(256, 20);
 mediumSpecialSizeIslands.addScale(512, 5);
 
-mediumSpecialSizeIslands.setHeightRange(32, 64)
+mediumSpecialSizeIslands.setHeightRange(32, 96)
 
 mediumSpecialSizeIslands.addType(desertCinnabar)
 mediumSpecialSizeIslands.addType(mesaGold)
@@ -988,12 +988,12 @@ mediumSpecialSizeIslands.addType(glacierGalena)
 //Adds sky islands. Arguments are horizontal radius, top height, bottom height, number of times to attempt to generate in each region, and whether each island should choose a random type (true), or if types should be used in order (false).
 //Raise up Mushroom Islands
 //MushroomGettingHigh = skyIslands.addSkyIslands(26, 26, 26, 9, true)
-MushroomGettingHigh = skyIslands.addRandomSizeSkyIslands(5,64,true,true)
+MushroomGettingHigh = skyIslands.addRandomSizeSkyIslands(4,64,true,true)
 MushroomGettingHigh.clearScale()
 MushroomGettingHigh.addScale(4, 10);
 MushroomGettingHigh.addScale(8, 30);
-MushroomGettingHigh.addScale(16, 10);
-MushroomGettingHigh.setHeightRange(32, 64)
+MushroomGettingHigh.addScale(16, 5);
+MushroomGettingHigh.setHeightRange(32, 96)
 MushroomGettingHigh.addType(mushroom_islandLapis)
 
 
@@ -1003,7 +1003,7 @@ MushroomGettingHigh.addType(mushroom_islandLapis)
 //Creates a new SkyIslandGeneratorV2, sets its grid region size, and adds it to the generator list for the dimension.
 ////
 millenaireSkyIslandsGenerator = new SkyIslandGeneratorV2()
-millenaireSkyIslandsGenerator.setRegionSize(100)
+millenaireSkyIslandsGenerator.setRegionSize(128)
 millenaireSkyIslandsGenerator.enableBWMVillageCompat()
 millenaireSkyIslandsGenerator.enableBWMMineshaftCompat()
 addGenerator(millenaireSkyIslandsGenerator)
@@ -1012,7 +1012,7 @@ addGenerator(millenaireSkyIslandsGenerator)
 ////Custom
 //default-radio count min-count
 //fallback radius,maxBottomHeight,topHeight,maxFluidPercentage, count, minCount,randomType
-largeMillenaireIslands = millenaireSkyIslandsGenerator.addMillenaireSkyIslands(1, 90, 50, 0.4, 100, 1, true)
+largeMillenaireIslands = millenaireSkyIslandsGenerator.addMillenaireSkyIslands(10, 96, 32, 0.4, 5, 1, true)
 
 largeMillenaireIslands.setResizeRatioBound(1.4~1.8)
 
