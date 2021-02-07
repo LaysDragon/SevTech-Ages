@@ -42,7 +42,6 @@ static replacementItemsForStage as IIngredient[][][string] = {
 		[<minecraft:fence:*>, <minecraft:planks:0>],
 		[<minecraft:crafting_table:*>, <minecraft:planks:0>],
 		[<minecraft:furnace:*>, <minecraft:cobblestone:0>],
-		[<minecraft:bed:*>, <minecraft:wooden_slab:0>],
 
 		[<betterwithmods:wood_table:*>, <minecraft:planks:0>],
 
@@ -53,9 +52,7 @@ static replacementItemsForStage as IIngredient[][][string] = {
 		[<minecraft:acacia_stairs:*>, <minecraft:planks:4>],
 		[<minecraft:sandstone_stairs:*>, <minecraft:sandstone:2>],
 
-		//millenaire
-		[<millenaire:bed_straw:*>, <minecraft:wooden_slab:0>],
-		[<millenaire:bed_charpoy:*>, <minecraft:wooden_slab:0>],
+
 
 		// Coal
 		[<minecraft:coal_ore:0>],
@@ -144,7 +141,14 @@ static replacementItemsForStage as IIngredient[][][string] = {
 		// Astral Sorcery
 		[<astralsorcery:blockcustomsandore:0>, <minecraft:sand:0>],
 		[<astralsorcery:blockcustomore:0>],
-		[<astralsorcery:blockgeolosyssamplecluster:0>, <immcraft:rock:0>]
+		[<astralsorcery:blockgeolosyssamplecluster:0>, <immcraft:rock:0>],
+
+		// [<minecraft:bed:*>, <minecraft:wooden_slab:0>], it won't work,since bed is not blockitem
+
+		//millenaire
+
+		[<millenaire:bed_straw:*>, <minecraft:wooden_slab:0>],
+		[<millenaire:bed_charpoy:*>, <minecraft:wooden_slab:0>]
 	],
 
 	stageThree.stage : [

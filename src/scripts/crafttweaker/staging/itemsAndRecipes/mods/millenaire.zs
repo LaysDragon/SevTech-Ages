@@ -12,9 +12,72 @@ import scripts.crafttweaker.stages.stageFive;
 import scripts.crafttweaker.stages.stageDisabled;
 
 static stagedItems as IIngredient[][string] = {
-	// stageOne.stage: [
-	// 	<millenaire:*>
-	// ],
+	stageZero.stage: [
+		<millenaire:seljukturban:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:furboots:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:furlegs:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:furplate:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:furhelmet:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:japaneseguardboots:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:japaneseguardlegs:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:japaneseguardplate:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:japaneseguardhelmet:*>.withTag({SpecialIgnoredNBT: true},false)
+	],
+	stageOne.stage: [
+		<millenaire:mayanmace:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:mayanhoe:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:mayanshovel:*>.withTag({SpecialIgnoredNBT: true},false)
+	],
+	stageTwo.stage: [
+		<millenaire:byzantinemace:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:byzantinehoe:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:byzantineshovel:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:byzantineaxe:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:byzantinepickaxe:*>.withTag({SpecialIgnoredNBT: true},false),
+
+		<millenaire:inuittrident:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:tachisword:*>.withTag({SpecialIgnoredNBT: true},false),
+
+		<millenaire:inuitbow:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:seljukbow:*>.withTag({SpecialIgnoredNBT: true},false),
+
+		<millenaire:japaneseredboots:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:japaneseredlegs:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:japaneseredplate:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:japaneseredhelmet:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:japaneseblueboots:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:japanesebluelegs:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:japaneseblueplate:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:japanesebluehelmet:*>.withTag({SpecialIgnoredNBT: true},false)
+	],
+	stageThree.stage: [
+		<millenaire:yumibow:*>.withTag({SpecialIgnoredNBT: true},false)
+	],
+	stageFive.stage: [
+		<millenaire:normanbroadsword:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:normanhoe:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:normanshovel:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:normanaxe:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:normanpickaxe:*>.withTag({SpecialIgnoredNBT: true},false),
+
+		<millenaire:mayanpickaxe:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:mayanaxe:*>.withTag({SpecialIgnoredNBT: true},false),
+
+		<millenaire:seljukscimitar:*>.withTag({SpecialIgnoredNBT: true},false),
+
+		<millenaire:normanhelmet:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:normanplate:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:normanlegs:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:normanboots:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:byzantinehelmet:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:byzantineplate:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:byzantinelegs:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:byzantineboots:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:seljukhelmet:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:seljukplate:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:seljuklegs:*>.withTag({SpecialIgnoredNBT: true},false),
+		<millenaire:seljukboots:*>.withTag({SpecialIgnoredNBT: true},false)
+	],
 	stageDisabled.stage: [
 		<millenaire:negationwand>,
 		<millenaire:summoningwand>

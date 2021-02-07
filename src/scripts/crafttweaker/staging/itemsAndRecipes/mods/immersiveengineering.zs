@@ -27,7 +27,7 @@ static stagedItems as IIngredient[][string] = {
 		<immersiveengineering:aluminum_scaffolding_stairs0:0>,
 		<immersiveengineering:aluminum_scaffolding_stairs1:0>,
 		<immersiveengineering:aluminum_scaffolding_stairs2:0>,
-		<immersiveengineering:blueprint:0>,
+		<immersiveengineering:blueprint:0>.withTag({SpecialIgnoredNBT: true},false),
 		<immersiveengineering:bullet:1>,
 		<immersiveengineering:bullet:2>.withTag({bullet: "armor_piercing"}),
 		<immersiveengineering:bullet:2>.withTag({bullet: "buckshot"}),
