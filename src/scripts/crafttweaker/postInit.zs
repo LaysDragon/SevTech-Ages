@@ -238,6 +238,7 @@ function initRecipes() {
 	scripts.crafttweaker.recipes.mods.ironchest.init();
 	scripts.crafttweaker.recipes.mods.ironjetpacks.init();
 	scripts.crafttweaker.recipes.mods.mekanism.init();
+	scripts.crafttweaker.recipes.mods.minecolonies.init();
 	scripts.crafttweaker.recipes.mods.minecraft.init();
 	scripts.crafttweaker.recipes.mods.mobgrindingutils.init();
 	scripts.crafttweaker.recipes.mods.modularmachinery.init();

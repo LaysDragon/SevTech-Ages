@@ -10,22 +10,22 @@ static stagedItems as IIngredient[][string] = {
 	stageOne.stage: [
 		<chiselsandbits:bit_bag:0>,
 		<chiselsandbits:bittank:0>,
-		<chiselsandbits:chisel_iron:0>,
-		<chiselsandbits:chisel_stone:0>,
-		<chiselsandbits:mirrorprint:0>,
-		<chiselsandbits:negativeprint:0>,
-		<chiselsandbits:positiveprint:0>,
-		<chiselsandbits:wrench_wood:0>
+		<chiselsandbits:chisel_iron:*>.withTag({SpecialIgnoredNBT: true},false),
+		<chiselsandbits:chisel_stone:*>.withTag({SpecialIgnoredNBT: true},false),
+		<chiselsandbits:mirrorprint:0>.withTag({SpecialIgnoredNBT: true},false),
+		<chiselsandbits:negativeprint:0>.withTag({SpecialIgnoredNBT: true},false),
+		<chiselsandbits:positiveprint:0>.withTag({SpecialIgnoredNBT: true},false),
+		<chiselsandbits:wrench_wood:*>
 	],
 
 	stageTwo.stage: [
-		<chiselsandbits:chisel_gold:0>,
+		<chiselsandbits:chisel_gold:*>.withTag({SpecialIgnoredNBT: true},false),
 		<chiselsandbits:tape_measure:0>
 	],
 
 	stageFive.stage: [
 		<chiselsandbits:bitsaw_diamond:*>,
-		<chiselsandbits:chisel_diamond:0>
+		<chiselsandbits:chisel_diamond:*>.withTag({SpecialIgnoredNBT: true},false)
 	]
 };
 
