@@ -828,7 +828,7 @@ oceanIslands.addType(oceanCoralium)
 
 //medium = skyIslands.addSkyIslands(50, 128, true)
 //medium = skyIslands.addSkyIslands(26, 26, 26, 74, true)
-medium = skyIslands.addRandomSizeSkyIslands(64, 64, true, true)
+medium = skyIslands.addRandomSizeSkyIslands(124, 64, true, true)
 
 medium.clearScale()
 medium.addScale(16, 30);
@@ -911,11 +911,11 @@ addGenerator(skySpecialSizeIslands)
 ////Custom
 //Ocean islands. Separate so they can be larger and have deeper water
 //count,maxVerticalRadius,interpolation, randomTypes
-oceanSpecialSizeIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(4,64,false,false)
+oceanSpecialSizeIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(3,64,false,false)
 
 oceanSpecialSizeIslands.clearScale()
 oceanSpecialSizeIslands.addScale(8, 10);
-oceanSpecialSizeIslands.addScale(256, 10);
+oceanSpecialSizeIslands.addScale(256, 5);
 
 oceanSpecialSizeIslands.setFluidDepth(8)
 oceanSpecialSizeIslands.setHeightRange(32, 96)
@@ -924,16 +924,14 @@ oceanSpecialSizeIslands.addType(oceanCoralium)
 
 //------------------mediumSpecialSizeIslands-------------------
 ////Custom
-//medium1 = addskySpecialSizeIslands.addskySpecialSizeIslands(50, 128, true)
 //count,maxVerticalRadius,interpolation, randomTypes
-mediumSpecialSizeIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(32,64,false,true)
+mediumSpecialSizeIslands = skySpecialSizeIslands.addRandomSizeSkyIslands(50,64,false,true)
 
 mediumSpecialSizeIslands.clearScale()
 mediumSpecialSizeIslands.addScale(8, 80);
 mediumSpecialSizeIslands.addScale(16, 120);
 mediumSpecialSizeIslands.addScale(128, 40);
 mediumSpecialSizeIslands.addScale(256, 20);
-mediumSpecialSizeIslands.addScale(512, 5);
 
 mediumSpecialSizeIslands.setHeightRange(32, 96)
 
