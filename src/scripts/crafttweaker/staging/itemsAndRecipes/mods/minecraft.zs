@@ -215,7 +215,7 @@ static stagedItems as IIngredient[][string] = {
 		<minecraft:stone_slab:3>,
 		<minecraft:stone_slab:7>,
 		<minecraft:stone_slab:0>,
-		<minecraft:stone_sword:*>,
+		<minecraft:stone_sword:*>.withTag({SpecialIgnoredNBT: true},false),
 		<minecraft:string:0>,
 		<minecraft:sugar:0>,
 		<minecraft:tallgrass:1>,
@@ -324,7 +324,7 @@ static stagedItems as IIngredient[][string] = {
 		<minecraft:iron_leggings:*>,
 		<minecraft:iron_pickaxe:*>.withTag({SpecialIgnoredNBT: true},false),
 		<minecraft:iron_shovel:*>.withTag({SpecialIgnoredNBT: true},false),
-		<minecraft:iron_sword:*>,
+		<minecraft:iron_sword:*>.withTag({SpecialIgnoredNBT: true},false),
 		<minecraft:iron_trapdoor:0>,
 
 		// Gold Stuff
@@ -340,7 +340,7 @@ static stagedItems as IIngredient[][string] = {
 		<minecraft:golden_leggings:*>,
 		<minecraft:golden_pickaxe:*>.withTag({SpecialIgnoredNBT: true},false),
 		<minecraft:golden_shovel:*>.withTag({SpecialIgnoredNBT: true},false),
-		<minecraft:golden_sword:*>,
+		<minecraft:golden_sword:*>.withTag({SpecialIgnoredNBT: true},false),
 
 		// Misc
 		<minecraft:acacia_boat:0>,
@@ -541,7 +541,7 @@ static stagedItems as IIngredient[][string] = {
 		<minecraft:diamond_leggings:*>,
 		<minecraft:diamond_pickaxe:*>.withTag({SpecialIgnoredNBT: true},false),
 		<minecraft:diamond_shovel:*>.withTag({SpecialIgnoredNBT: true},false),
-		<minecraft:diamond_sword:*>,
+		<minecraft:diamond_sword:*>.withTag({SpecialIgnoredNBT: true},false),
 		<minecraft:diamond:0>,
 		<minecraft:emerald_block:0>,
 		<minecraft:emerald:0>
@@ -580,7 +580,7 @@ static hiddenRemove as IIngredient[] = [
 	<minecraft:wooden_hoe:*>.withTag({SpecialIgnoredNBT: true},false),
 	<minecraft:wooden_pickaxe:*>.withTag({SpecialIgnoredNBT: true},false),
 	<minecraft:wooden_shovel:*>.withTag({SpecialIgnoredNBT: true},false),
-	<minecraft:wooden_sword:*>
+	<minecraft:wooden_sword:*>.withTag({SpecialIgnoredNBT: true},false)
 ];
 
 function init() {

@@ -42,6 +42,7 @@ static replacementItemsForStage as IIngredient[][][string] = {
 		[<minecraft:fence:*>, <minecraft:planks:0>],
 		[<minecraft:crafting_table:*>, <minecraft:planks:0>],
 		[<minecraft:furnace:*>, <minecraft:cobblestone:0>],
+		[<minecraft:bed:*>, <minecraft:wooden_slab:0>],
 
 		[<betterwithmods:wood_table:*>, <minecraft:planks:0>],
 
